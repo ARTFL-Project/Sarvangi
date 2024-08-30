@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import os
 
 # Add the path to your files (the directory you're working in)
-working_directory = '/Users/shikha/Desktop/Sarvangi/Sarvangi'
+working_directory = '/Users/shikha/Desktop/Sarvangi/Sarvangi_new'
 os.chdir(working_directory)  # Ensure you're in the correct directory
 print(f"Current Working Directory: {os.getcwd()}")  # Print the current directory
 
@@ -46,7 +46,7 @@ tei += "</TEI>"
 
 # Parse the complete XML and write to a new file
 soup = BeautifulSoup(tei, "xml")
-with open("sarvangi_of_gopaldaS.xml", "w", encoding="utf-8") as file:
+with open("sarvangi_of_gopaldas.xml", "w", encoding="utf-8") as file:
     file.write(soup.prettify())
-    print("Completed writing to sarvangi_of_gopaldaS.xml")  
+    print("Completed writing to sarvangi_of_gopaldas.xml")  
 
